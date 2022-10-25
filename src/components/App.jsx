@@ -1,16 +1,43 @@
+import {Profile} from './Profile/Profile';
+
+import {StatsList} from './StatsList';
+import user from './Profile/user.json';
+import data from './Statistics/data.json';
+//import { Statistics } from './Statistics/Statistics';
+import {StatsTitle} from './Statistics/StatsTitle';
+
+/*export const App = () => {
+ return (
+   <div
+     style={{
+       height: '100vh',
+       display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+      fontSize: 40,
+       color: '#010101'
+     }}
+   >
+      React homework template
+
+    <Profile />
+    
+   </div>
+ );
+};*/
+
 export const App = () => {
   return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
-      }}
-    >
-      React homework template
-    </div>
+    <div className="App">
+  <Profile
+  username={user.username}
+  tag={user.tag}
+  location={user.location}
+  avatar={user.avatar}
+  stats={user.stats}
+/>
+<StatsTitle /*title="Upload stats"*/  />
+<StatsList stats={data} />
+</div>
   );
-};
+ };
