@@ -1,10 +1,17 @@
 import {Profile} from './Profile/Profile';
+import {StatsTitle} from './Statistics/StatsTitle';
+import {StatsList} from './Statistics/StatsList';
+import {FriendList} from './FriendList/FriendList.jsx';
+import {TransactionTable} from './Transaction/TransactionTable.jsx';
+//import {TransactionTitle} from './Transaction/TransactionTitle.jsx';
 
-import {StatsList} from './StatsList';
 import user from './Profile/user.json';
 import data from './Statistics/data.json';
+import friends from './FriendList/friends.json';
+import transactions from './Transaction/transactions.json';
+
 //import { Statistics } from './Statistics/Statistics';
-import {StatsTitle} from './Statistics/StatsTitle';
+
 
 /*export const App = () => {
  return (
@@ -38,6 +45,9 @@ export const App = () => {
 />
 <StatsTitle /*title="Upload stats"*/  />
 <StatsList stats={data} />
+<FriendList friends={friends} />;
+
+<TransactionTable items={transactions} />;
 </div>
   );
  };
