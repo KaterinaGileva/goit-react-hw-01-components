@@ -1,10 +1,8 @@
-import css from './StatsTitle.module.css'
+import css from './StatsTitle.module.css';
 
-export const StatsTitle = () => {
-    return <h2 className={css.title}>Upload stats</h2>;
-
-};
-
-//StatsTitle.propTypes = {
-//    text: propTypes.string.isRequired,
-//};
+export const Statistics = ({ title }) => {
+    return (
+        
+      <h2 className={css.title}>{title}</h2>  
+      )
+      };

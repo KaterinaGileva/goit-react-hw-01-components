@@ -1,0 +1,39 @@
+table {
+    width: 1000px;
+    border-collapse: collapse;
+    text-align: center;
+    color: aliceblue;
+    font-family: Arial, Helvetica, sans-serif;
+    border: 2px solid lightgray; 
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  }
+  
+  .thead {
+    font-size: 20px;
+    font-weight: 500;
+    text-transform: uppercase;
+    background-color: lightskyblue;
+  }
+
+  table td,
+  table th {
+    box-sizing: border-box;
+    
+    padding: 10px;
+    border: 1px solid lightgray; 
+  }
+
+  table td {
+  background-color: lightcyan;
+    color: gray;
+  }
+
+  .tdType {
+    text-transform: capitalize;
+  }
+
+  table th:hover,.tdType:hover, .tdAmount:hover, .tdCurrency:hover {
+    transform: scale(1.03);
+  }
+
+  

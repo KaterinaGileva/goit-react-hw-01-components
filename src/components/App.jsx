@@ -1,19 +1,27 @@
-import {Profile} from './Profile/Profile';
-import {StatsTitle} from './Statistics/StatsTitle';
-import {StatsList} from './Statistics/StatsList';
-import {FriendList} from './FriendList/FriendList.jsx';
-import {TransactionTable} from './Transaction/TransactionTable.jsx';
-//import {TransactionTitle} from './Transaction/TransactionTitle.jsx';
+import { Profile } from './Profile/Profile';
 
-import user from './Profile/user.json';
+import { Statistics } from './Statistics/Statistics.jsx';
+import { FriendList } from './FriendList/FriendList.jsx';
+import { TransactionHistory } from './Transaction/TransactionHistory.jsx';
+import css from '../components/App.module.css';
+
 import data from './Statistics/data.json';
 import friends from './FriendList/friends.json';
 import transactions from './Transaction/transactions.json';
 
-//import { Statistics } from './Statistics/Statistics';
+export const App = () => {
+  return (
+    <div className={css.container}>
+  <Profile />
+  <Statistics title="Upload stats" stats={data} />
+  <Statistics stats={data} />
+  <FriendList friends={friends} />
+  <TransactionHistory items={transactions} />
+</div>
+  );
+ };
 
-
-/*export const App = () => {
+ /*export const App = () => {
  return (
    <div
      style={{
@@ -27,27 +35,8 @@ import transactions from './Transaction/transactions.json';
    >
       React homework template
 
-    <Profile />
+    
     
    </div>
  );
 };*/
-
-export const App = () => {
-  return (
-    <div className="App">
-  <Profile
-  username={user.username}
-  tag={user.tag}
-  location={user.location}
-  avatar={user.avatar}
-  stats={user.stats}
-/>
-<StatsTitle /*title="Upload stats"*/  />
-<StatsList stats={data} />
-<FriendList friends={friends} />;
-
-<TransactionTable items={transactions} />;
-</div>
-  );
- };
