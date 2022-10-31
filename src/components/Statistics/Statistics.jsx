@@ -5,6 +5,7 @@ import css from './Statistics.module.css';
 
 export const Statistics = ({ stats, title }) => {
     return ( 
+      
       <section className={css.statistics}>   
       <h2 className={css.title}>{title}</h2>  
       <ul className={css.statsList}>
@@ -30,3 +31,18 @@ Statistics.propTypes = {
   }),
   ),
 };
+
+//function getRandomHexColor() {
+ // return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
+//}
+
+//const btnChangeColor = document.querySelector('.change-color');
+//const spanEl = document.querySelector('.color');
+
+//btnChangeColor.addEventListener('click', () => {
+  //spanEl.textContent = getRandomHexColor();
+  //document.body.setAttribute(
+    //'style',
+   // 'background-color: ' + spanEl.textContent
+  //);
+//});
